@@ -1,0 +1,136 @@
+{% extends 'web/base.html' %} {% block content %}
+{% load static %}
+<!-- content -->
+<main class="main" id="top">
+    <div class="container" data-layout="container">
+      
+  
+      <div class="mt-5 mb-8 mx-auto" style="max-width: 1000px;">
+
+        <!-- box 1 -->
+        <div class="mt-2 mx-auto" style="max-width: 1000px;">
+          <div class="green-title mb-2">訂單資訊</div>
+          <div class="rounded-box">
+              <div class="row">
+                <div class="col-4 col-md-3 col-lg-2"><b>訂單號碼</b></div>
+                <div class="col-8 col-md-9 col-lg-10">
+                  <div class="row justify-content-between">
+                    <div class="col-5 col-sm-6 col-md-4 col-lg-3 col-xl-3">0000000001</div>
+
+                    <div class="col-7 col-sm-6 col-md-4 col-lg-3 col-xl-3 text-end">
+                      <div class="mx-3">
+                        <div class="green-status" >訂單已完成</div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-4 col-md-3 col-lg-2"><b>付款方式</b></div>
+                <div class="col-8 col-md-8 col-lg-8">ATM代碼繳費&emsp;繳費成功</div>
+              </div>
+              <hr>
+              <div class="mt-2 row">
+                <div class="col-4 col-md-3 col-lg-2"><b>訂購人姓名</b></div>
+                <div class="col-8 col-md-8 col-lg-8">王小明</div>
+              </div>
+              <div class="mt-2 row">
+                <div class="col-4 col-md-3 col-lg-2"><b>訂購人電話</b></div>
+                <div class="col-8 col-md-8 col-lg-8">0911-222333</div>
+              </div>
+              <div class="mt-2 row">
+                <div class="col-4 col-md-3 col-lg-2"><b>Email</b></div>
+                <div class="col-8 col-md-8 col-lg-8">abc@email.com</div>
+              </div>
+              <hr>
+              <div class="mt-2 row">
+                <div class="col-4 col-md-3 col-lg-2"><b>收件人姓名</b></div>
+                <div class="col-8 col-md-8 col-lg-8">王小明</div>
+              </div>
+              <div class="mt-2 row">
+                <div class="col-4 col-md-3 col-lg-2"><b>收件人電話</b></div>
+                <div class="col-8 col-md-8 col-lg-8">0911-222333</div>
+              </div>
+              <div class="mt-2 row">
+                <div class="col-4 col-md-3 col-lg-2"><b>收件人地址</b></div>
+                <div class="col-8 col-md-8 col-lg-8">新北市XXXXXXXXXXXX</div>
+              </div>
+              <div class="mt-2 row">
+                <div class="col-4 col-md-3 col-lg-2"><b>備註</b></div>
+                <div class="col-8 col-md-8 col-lg-8">xxxxxxxxxxxx</div>
+              </div>
+              
+          </div>
+        </div>
+        
+ 
+        <!-- box 2 -->
+        <div class="mt-4 mx-auto" style="max-width: 1000px;">
+          
+            <div class="green-title mb-2">購物明細</div>
+
+            <div class="rounded-box">
+              <!-- table -->
+              <div class="table-responsive scrollbar">
+                    
+                    <table class="table overflow-hidden">
+                      <thead class="">
+                        <tr>
+                          <th scope="col">商品名稱</th>
+                          <th scope="col">數量</th>
+                          <th scope="col">單價</th>
+                          <th scope="col" class="text-end">總計</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>玫瑰曲奇</td>
+                          <td>2</td>
+                          <td>$150</td>
+                          <td class="text-end">$300</td>
+                        </tr>
+                        <tr>
+                          <td>玫瑰曲奇</td>
+                          <td>2</td>
+                          <td>$150</td>
+                          <td class="text-end">$300</td>
+                        </tr>
+                      </tbody>
+                    </table>
+              </div>
+
+              <!-- price  -->
+              <div class="price-box">
+                    <div class="d-flex justify-content-end">
+                        <div class="text-end">商品金額&emsp;</div>
+                        <div class="text-end">$660</div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <div class="text-end">運費&emsp;&emsp;&emsp;&ensp;</div>
+                        <div class="text-end">$80</div>
+                    </div>
+                    <div style=" width: 200px; margin-left: auto;">
+                        <hr style="color: grey;"  >
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center">
+                        <div class="text-end">總計&emsp;</div>
+                        <div class="text-end cart-price">$740</div>
+                    </div>
+              </div>
+            </div>
+         
+        </div>
+          
+          
+        <!-- buttons -->
+        <div class="mt-5 d-flex justify-content-between">
+          <a href="{% url 'member_orders' %}"><div class="green-button">回所有訂單</div></a>
+        </div>
+      </div>
+
+    </div>
+</main>
+{% endblock %}
+  

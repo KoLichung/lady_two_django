@@ -1,0 +1,153 @@
+{% extends 'backboard/base.html' %} {% block content %}
+{% load static %}
+<!-- 內容 -->
+<div class="g-3 mb-3">
+  <div class="col-lg-12 ps-lg-2 mb-3">
+
+    <!-- 訂單明細 -->
+    <div class="card h-lg-100 mb-3">
+      <div class="card-header">
+        <div class="table-responsive scrollbar">
+          <table class="table  table-striped fs--1 mb-0">
+            <p>購買人明細</p>
+            <thead class="green-thead">
+              <tr>
+                <th>訂單狀態</th>
+                <th>訂單號碼</th>
+                <th>訂單日期</th>
+                <th>金額</th>
+                <th>付款狀態</th>
+                <th>付款方式</th>
+                <th>付款日期</th>
+              </tr>
+            </thead>
+            <tbody class="list">
+              <tr>
+                <td>
+                  <button type="button" class="brown-border-btn">未處理</button>
+                </td>
+                <td>0000000000</td>
+                <td>2022-09-12</td>
+                <td>$1233</td>
+                <td >
+                  <button type="button" class="brown-border-btn">尚未付款</button>
+                </td>
+                <td>超商代碼付款</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>    
+      </div>
+    </div>
+
+    <!-- 購買人明細 -->
+    <div class="card h-lg-100 mb-3">
+      <div class="card-header">
+        <div class="table-responsive scrollbar">
+          <table class="table  table-striped fs--1 mb-0">
+            <p>購買人資料</p>
+            <thead class="green-thead">
+              <tr>
+                <th>訂購人</th>
+                <th>電話</th>
+                <th>地址</th>
+                <th colspan="2"></th>
+              </tr>
+            </thead>
+            <tbody class="list">
+              <tr>
+                <td>王小明</td>
+                <td>0912333444</td>
+                <td>xxxxxxxxxxxxxxxx</td>
+                <td class="text-end">
+                  <a href="{% url 'customer_detail' %}" type="button" class="green-btn">查看</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- 收件者明細 -->
+    <div class="card h-lg-100 mb-3">
+      <div class="card-header">
+        <div class="table-responsive scrollbar">
+          <table class="table  table-striped fs--1 mb-0">
+            <p>收件者資料</p>
+            <thead class="green-thead">
+              <tr>
+                <th>收件人</th>
+                <th>電話</th>
+                <th>地址</th>
+                <th>備註</th>
+              </tr>
+            </thead>
+            <tbody class="list">
+              <tr>
+                <td>王小明</td>
+                <td>0912333444</td>
+                <td>xxxxxxxxxxxxxxxx</td>
+                <td>xxxxxxxxxxxxxxxx</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品明細 -->
+    <div class="card h-lg-100 mb-3">
+      <div class="card-header">
+        <div class="table-responsive scrollbar">
+          <table class="table  table-striped fs--1 mb-0">
+            <p>訂購商品明細</p>
+            <thead class="green-thead">
+              <tr>
+                <th colspan="2">商品名稱</th>
+                <th>單價</th>
+                <th>數量</th>
+                <th>小計</th>
+              </tr>
+            </thead>
+            <tbody class="list">
+              <tr>
+                <td>曲奇</td>
+                <td></td>
+                <td>130</td>
+                <td>5</td>
+                <td>650</td>
+              </tr>
+              <tr>
+                <td>曲奇</td>
+                <td></td>
+                <td>130</td>
+                <td>5</td>
+                <td>650</td>
+              </tr>
+              <tr>
+                <td>曲奇曲奇曲奇曲奇曲奇曲奇曲奇</td>
+                <td></td>
+                <td>130</td>
+                <td>5</td>
+                <td>650</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td></td>
+                <td></td>
+                <td class="text-end" colspan="2">總計</td>
+                <td><b>650</b></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+ 

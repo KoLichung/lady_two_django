@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang = "zh-Hant" dir="ltr">
+<head>
+  <meta charset = "utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name = "viewport", content= "width = device-width, initial-scale = 1" >
+  <meta name = "robots" content = "index, follow">
+  <meta name = "description" content="二小姐雪Q餅絕對是吃過最好吃的餅乾之一，口感綿密且不膩，吃著吃著一包很快就吃完了！">
+  
+  <title>二小姐甜點</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'web/assets/img/favicons/care168_logo_32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'web/assets/img/favicons/care168_logo_16x16.png' %}">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'web/assets/img/favicons/logo_48x48.ico' %}">
+  <!-- css -->
+  <link rel="stylesheet" href="{% static 'web/vendors/swiper/swiper-bundle.min.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+  <link href="{% static 'web/vendors/overlayscrollbars/OverlayScrollbars.min.css' %}" rel="stylesheet">
+  <link href="{% static 'web/assets/css/theme.min.css' %}" rel="stylesheet" id="style-default">
+  <link href="{% static 'web/assets/css/user.css' %}" rel="stylesheet" id="user-style-default">
+</head>
+<body>
+  <!-- nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #124935;">
+    <div class="container">
+      <a class="navbar-brand text-white" href="{% url 'index' %}">
+        <img src="{% static 'web/assets/img/lady_two.png' %}" style="height: 35px;"alt="">
+        二小姐甜點
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'products' %}">商品列表</a>
+              </li>
+            </ul>
+            <div class="d-flex">
+
+                <div class="me-2" style="margin-top: 14px;">
+                  <a class="" href="{% url 'login' %}"><span class="text-white">登入/註冊</span> </a>
+                </div>
+
+                <div class="me-2" style="margin-top: 14px;">
+                  <li class="dropdown">
+                    <a class=" pe-0 ps-2" id="navbarDropdownUser" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="fas fa-user text-white fs-1" ></span>
+                    </a>
+                  <div class="dropdown-menu dropdown-menu-end py-0" aria-labelledby="navbarDropdownUser">
+                    <div class="bg-white dark__bg-1000 rounded-2 py-2">
+                      <a class="dropdown-item " href="{% url 'member' %}">會員中心</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="{% url 'member_orders' %}">歷史訂單</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#!">登出</a>
+                    </div>
+                  </div>
+                </li>
+                </div>
+
+                <div>
+                    <a class="nav-link px-0 notification-indicator notification-indicator-danger notification-indicator-fill fa-icon-wait" href="{% url 'cart_order_list' %}">
+                      <span class="fas fa-shopping-cart text-white" data-fa-transform="shrink-7" style="font-size: 33px;"></span>
+                      <span class="notification-indicator-number">1</span>
+                    </a>
+                </div>
+                
+            </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- content -->
+  {% block content %}{% endblock %}
+
+  <!-- footer -->
+  <footer style="background-color: #124935;">
+    <div class="container text-white">
+        <div class="row py-5 mx-auto">
+            <div class="col-sm-12 col-md-12  col-lg-5 mx-auto mb-5">
+              <p class="h5 text-white mb-3">二小姐的初衷</p>
+              <div class="">
+                <p>做給家人的餅乾，從材料到製作，每一個步驟都仔細思量，要可口，也要對身體無負擔，所以不添加任何化學添加物，講求食材本身的味道、口感，直到它經過家人長久味蕾的審核</p> 
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4  col-lg-2 mx-auto mb-5">
+                <p class="h5 text-white mb-3">商品系列</p>
+                    <ul style="list-style: none; padding:0px;" >
+                    <li><a href="" class="text-white">二小姐雪Q餅</a></li>
+                    <li><a href="" class="text-white">二小姐玫瑰曲奇</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-12 col-md-4  col-lg-2 mx-auto mb-5">
+                <p class="h5 text-white mb-3">追蹤我們</p>
+                <span class="fab fa-instagram"></span> 
+                Instagram
+            </div>
+            <div class="col-sm-12 col-md-4  col-lg-2 mx-auto mb-5">
+                <p class="h5 text-white mb-3">消費者客服</p>
+                <span>週一 ~ 週五：09:30~17:00<br></span> 
+                <span class="fab fa-line"></span>
+                LINE 官方客服 
+            </div>
+        </div>
+    </div>
+  </footer>
+
+      <!-- JavaScripts -->
+      <script src="{% static 'web/vendors/popper/popper.min.js' %}"></script>
+      <script src="{% static 'web/vendors/bootstrap/bootstrap.min.js' %}"></script>
+      <script src="{% static 'web/vendors/anchorjs/anchor.min.js' %}"></script>
+      <script src="{% static 'web/vendors/is/is.min.js' %}"></script>
+      <script src="{% static 'web/vendors/swiper/swiper-bundle.min.js' %}"> </script>
+      <script src="{% static 'web/vendors/typed.js/typed.js' %}"></script>
+      <script src="{% static 'web/vendors/fontawesome/all.min.js' %}"></script>
+      <script src="{% static 'web/vendors/lodash/lodash.min.js' %}"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+      <script src="{% static 'web/vendors/list.js/list.min.js' %}"></script>
+      <script src="{% static 'web/assets/js/theme.js' %}"></script> 
+</body>
+</html>

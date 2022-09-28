@@ -1,0 +1,288 @@
+/* -------------------------------------------------------------------------- */
+/*                                chijia Button                               */
+/* -------------------------------------------------------------------------- */
+/* prettier-ignore */
+/*# sourceMappingURL=user.css.map */
+
+    
+.parentClass {
+    position: relative;
+    width: 75vw;
+    height:40vh;
+    z-index: 9;
+    background-size: cover;
+    margin:0vw auto;   
+}
+
+@media(max-width:992px){
+    .parentClass {
+        position: relative;
+        width: 85vw;
+        height:40vh;
+        z-index: 9;
+        background-size: cover;
+        margin:0vw auto;   
+    }
+}
+
+@media(max-width:768px){
+    .parentClass {
+        position: relative;
+        width: 100vw;
+        height:40vh;
+        z-index: 9;
+        background-size: cover;
+        margin:0vw auto;   
+    }
+}
+
+.childClassLeft {
+    bottom: 20%;
+    left: 6%;
+    position: absolute;
+    width: 300px;
+    height: 170px;
+    text-align: left;
+    color: white; 
+    padding: 20px 30px;
+    background: rgba(222, 187, 95, 0.5);
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+}
+
+.childClassRight {
+  bottom: 10%;
+  right: 6%;
+  position: absolute;
+  width: 340px;
+  height: 170px;
+  text-align: left;
+  color: white; 
+  padding: 20px 30px;
+  background: rgba(222, 187, 95, 0.5);
+  backdrop-filter: blur(2px);
+  border-radius: 5px;
+}
+
+.green-button{
+  background-color: #124935;
+  color: white;
+  font-size: 12pt;
+  padding: 6px 12px;
+  border-radius: 3px;
+}
+
+.green-button:hover{
+    background-color: #962108;
+    color: white;
+    font-size: 12pt;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.brown-button{
+  background-color: #965317;
+  color: white;
+  font-size: 12pt;
+  padding: 6px 12px;
+  border-radius: 3px;
+}
+
+.brown-button:hover{
+    background-color: #962108;
+    color: white;
+    font-size: 12pt;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.right{
+  float: right;
+}
+
+.cart-price{
+  color: #E63756;
+  font-size: 20pt;
+}
+
+a, a:hover{
+    text-decoration: none;
+}
+
+a .card-text{
+  color: #748194;
+}
+
+a u {
+  color: #965317;
+}
+
+body {
+  background-color: white;
+}
+
+.active-circle-bg{
+  background-color: #124935;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  color: white;
+  z-index: 99;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 5px;
+  font-size: 14pt;
+}
+
+.dead-circle-bg{
+  background-color: grey;
+  border-radius: 50%;
+  height: 5em;
+  width: 5em;
+  color: white;
+  z-index: 99;
+}
+
+
+
+/* ----------------
+ progress bar start
+ ------------------ */
+
+.stepper-wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: -50%;
+  z-index: 2;
+}
+
+.stepper-item::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 2;
+}
+
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-bottom: 6px;
+}
+
+.stepper-item.active {
+  font-weight: bold;
+}
+
+.stepper-item.completed .step-counter {
+  background-color: #124935;
+  color: #fff;
+}
+
+.stepper-item.completed::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #124935;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 3;
+}
+
+.stepper-item:first-child::before {
+  content: none;
+}
+.stepper-item:last-child::after {
+  content: none;
+}
+
+/* ---------------
+ progress bar end
+ ----------------- */
+
+td {
+  vertical-align: center;
+}
+
+.grey-price-box{
+  background-color: #E5E5E5; 
+  max-width: 1000px;
+  padding: 20px 30px;
+}
+
+.price-box{
+  background-color: fff; 
+  max-width: 1000px;
+  padding: 10px 20px;
+}
+
+.green-title{
+  color: #124935;
+  font-size: 18pt;
+  font-weight: 900;
+}
+
+.green-text{
+  text-align: center;
+  color: #124935;
+  font-size: 12pt;
+}
+
+.rounded-box{
+  border: 1px solid #878686;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.green-status{
+  background-color: #124935;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.feature-text{
+  text-indent: 4em;
+}
+
+li{
+  list-style-type: disc; !important;
+}
+
+

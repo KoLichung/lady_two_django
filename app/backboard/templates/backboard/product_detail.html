@@ -1,0 +1,99 @@
+{% extends 'backboard/base.html' %} {% block content %}
+{% load static %}
+<!-- 內容 -->
+<div class="g-3 mb-3">
+  <div class="col-lg-12 ps-lg-2 mb-3">
+    <div class="card h-lg-100">
+      <div class="card-header">
+        <div class="mb-3">商品詳細<hr></div>
+
+          <!-- 商品分類 -->
+          <div>
+            <div>
+              <label class="form-label">商品分類：</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="inlineRadio1" type="radio" name="inlineRadioOptions" value="option1" />
+              <label class="form-check-label" for="inlineRadio1">分類一</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="inlineRadio2" type="radio" name="inlineRadioOptions" value="option2" />
+              <label class="form-check-label" for="inlineRadio2">分類二</label>
+            </div>
+          </div>
+
+          <!-- 商品名稱 -->
+          <div class="mb-3">
+            <label class="form-label" for="exampleFormControlInput1">商品名稱：</label>
+            <input class="form-control" id="exampleFormControlInput1" type="email" placeholder="" />
+          </div>
+
+          <!-- 商品副標 -->
+          <div class="mb-3">
+            <label class="form-label" for="exampleFormControlInput1">商品副標：</label>
+            <input class="form-control" id="exampleFormControlInput1" type="email" placeholder="" />
+          </div>
+
+          <!-- 商品敘述 -->
+          <div class="mb-3">
+            <label class="form-label" for="exampleFormControlTextarea1">商品敘述：</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+          </div>
+
+          <!-- 內容物 -->
+          <div class="mb-3">
+            <label class="form-label" for="exampleFormControlInput1">內容物：</label>
+            <input class="form-control" id="exampleFormControlInput1" type="" />
+          </div>
+                    
+          <!-- 商品售價、單位、庫存 -->
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <label class="form-label" for="exampleFormControlInput1">商品售價：</label>
+              <input class="form-control form-inline" id="exampleFormControlInput1" type="email" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label" for="exampleFormControlInput1">單位：</label>
+              <input class="form-control form-inline" id="exampleFormControlInput1" type="email" placeholder="包、個、支...等" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label" for="exampleFormControlInput1">商品庫存：</label>
+              <input class="form-control form-inline" id="exampleFormControlInput1" type="email" />
+            </div>
+          </div>
+
+          <!-- 商品圖片 -->
+          <div class="mb-3">
+            <label class="form-label" for="exampleFormControlInput1">商品圖片：</label>
+            <button class="brown-btn">上傳圖片</button>
+            <div class="row mx-n1 mt-3">
+              <div class="col-6 p-1">
+                <img class="customImageSize rounded mb-2" style="width: 200px;" src="{% static 'backboard/assets/img/products/1-6.jpg' %}" alt="" />
+                <img class="customImageSize rounded mb-2" style="width: 200px;" src="{% static 'backboard/assets/img/products/1-6.jpg' %}" alt="" />
+                <img class="customImageSize rounded mb-2" style="width: 200px;" src="{% static 'backboard/assets/img/products/1-6.jpg' %}" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <!-- 上架狀態 -->
+          <div>
+            <div>
+              <label class="form-label">上架狀態：</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="inlineRadio1" type="radio" name="inlineRadioOptions" value="option1" />
+              <label class="form-check-label" for="inlineRadio1">上架</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="inlineRadio2" type="radio" name="inlineRadioOptions" value="option2" />
+              <label class="form-check-label" for="inlineRadio2">下架</label>
+            </div>
+          </div>
+          <div class="col-12 text-end">
+            <button class="brown-btn" type="submit">確定新增</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>         
+{% endblock %}

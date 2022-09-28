@@ -1,0 +1,36 @@
+{% extends 'web/base.html' %} {% block content %}
+{% load static %}
+  <!-- login box -->
+  <div class="my-8 mx-auto" style="max-width: 800px;">
+        <div class="mx-4">
+              <div class="card-header" style="background-color: #124935;">
+                  <div class="px-3 align-self-center">
+                    <h5 class="mb-0 text-white">會員登入</h5>
+                  </div>
+              </div>
+      
+              <div class="card-body bg-white border px-xs-5 px-sm-7 px-md-7 px-lg-9 py-3">
+  
+                <div class="mt-4 mb-3">
+                      <label class="form-label" for="exampleFormControlInput1">Email</label>
+                      <input class="form-control" id="exampleFormControlInput1" type="email" placeholder="" />
+                </div>
+  
+                <div class="mb-3">
+                      <label class="form-label" for="exampleFormControlInput1">密碼</label>
+                      <input class="form-control" id="exampleFormControlInput1" type="password" placeholder="" />
+                </div>
+
+                <div class="mb-3 mt-5 text-center">
+                  <a href="" class="green-button px-6">登入</a>
+                </div>
+
+                <div class="mb-3 mt-5 text-center">
+                  <a href="{% url 'register' %}"><u>尚未加入會員？點這裡註冊帳號</u> </a> 
+                </div>
+
+              </div>
+  
+        </div>
+  </div>
+{% endblock %}

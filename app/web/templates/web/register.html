@@ -1,0 +1,55 @@
+{% extends 'web/base.html' %} {% block content %}
+{% load static %}
+<!-- login box -->
+<div class="my-8 mx-auto" style="max-width: 800px;">
+        <div class="mx-4">
+              <div class="card-header" style="background-color: #124935;">
+                  <div class="px-3 align-self-center">
+                    <h5 class="mb-0 text-white">註冊會員</h5>
+                  </div>
+              </div>
+      
+              <div class="card-body bg-white border px-xs-5 px-sm-7 px-md-7 px-lg-8 py-3">
+  
+                <div class="mt-4 mb-3">
+                    <label class="form-label" for="exampleFormControlInput1">姓名</label>
+                    <input class="form-control" id="exampleFormControlInput1" type="text" placeholder="" />
+                </div>
+                
+                <div class="mt-4 mb-3">
+                      <label class="form-label" for="exampleFormControlInput1">Email</label>
+                      <input class="form-control" id="exampleFormControlInput1" type="email" placeholder="" />
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label class="form-label" for="exampleFormControlInput1">密碼</label>
+                            <input class="form-control" id="exampleFormControlInput1" type="password" placeholder="" />
+                      </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-3">
+                            <label class="form-label" for="exampleFormControlInput1">再次確認密碼</label>
+                            <input class="form-control" id="exampleFormControlInput1" type="password" placeholder="" />
+                      </div>
+                    </div>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" id="flexCheckIndeterminate" type="checkbox" value="" />
+                    <label class="form-check-label" for="flexCheckIndeterminate">我同意網站服務條款及隱私政策</label>
+                </div>
+                
+
+                <div class="my-5 text-center">
+                    <a href="" class="green-button px-6">註冊</a>
+                </div>
+
+                
+
+              </div>
+  
+        </div>
+</div>
+{% endblock %}

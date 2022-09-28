@@ -1,0 +1,128 @@
+{% extends 'web/base.html' %} {% block content %}
+{% load static %}
+
+  <!-- product image & info -->
+  <div class="mx-auto d-bloc" style="max-width: 1200px;">
+    <div class="row mt-5 mx-4 mt-lg-6 mx-lg-5">
+
+        <!-- image swiper -->
+        <div class="col-md-7 col-lg-8 mb-4 mb-lg-0">
+              <div class="product-slider" id="galleryTop">
+                <div class="swiper-container theme-slider position-lg-absolute all-0" data-swiper='{"autoHeight":false,"spaceBetween":5,"loop":true,"loopedSlides":5,"thumb":{"spaceBetween":5,"slidesPerView":5,"loop":true,"freeMode":true,"grabCursor":true,"loopedSlides":5,"centeredSlides":true,"slideToClickedSlide":true,"watchSlidesVisibility":true,"watchSlidesProgress":true,"parent":"#galleryTop"},"slideToClickedSlide":true}'>
+                  <div class="swiper-wrapper h-100">
+                    <div class="swiper-slide h-100"><img class="rounded-1 fit-cover h-100 w-100" src="{% static 'web/assets/img/square_1.png' %}" alt="" /></div>
+                    <div class="swiper-slide h-100"><img class="rounded-1 fit-cover h-100 w-100" src="{% static 'web/assets/img/square_2.png' %}" alt="" /></div>
+                  </div>
+                  <div class="swiper-nav">
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+                  </div>
+                </div>
+              </div>
+        </div>
+  
+        <!-- product info -->
+        <div class="col-md-5 col-lg-4 mb-4">
+              <h3>二小姐 蔓越莓雪Q餅</h3>
+              <p>
+                  酥鬆好吃 果肉看得見<br>
+                  小孩 長輩也合適！
+              </p>
+              <p class="card-text"> <span class="cart-price">$165</span> / 包</p>
+  
+              <div class="row align-items-center">
+                  <div class="col-auto pe-0">
+                    <div class="input-group " data-quantity="data-quantity">
+                      <button class="btn btn-sm btn-outline-secondary border-300" data-field="input-quantity" data-type="minus">-</button>
+                      <input class="form-control text-center input-quantity input-spin-none" type="number" min="0" value="0" aria-label="Amount (to the nearest dollar)" style="max-width: 50px" />
+                      <button class="btn btn-sm btn-outline-secondary border-300" data-field="input-quantity" data-type="plus">+</button>
+                    </div>
+                  </div>
+                  <div class="col-auto px-2 px-md-3">
+                    <a href="" class="green-button">立即購買</a>
+                  </div>
+                  <div class="col-auto px-0">
+                    <button href="" class=" btn green-button"> 
+                        <i class="fas fa-cart-plus"></i> 
+                    </button>
+                  </div>
+              </div>
+  
+              <hr>
+  
+              <p><b>內容物</b></p>
+              <p>
+                 12 顆 蔓越莓 每顆重量約 18g+-3g<br>
+                 總重約 216g
+              </p>
+              <hr>
+              <p><b>商品描述</b></p>
+
+              <p>
+                &ensp;•&ensp;每顆產品皆是手工現做，注重食材新鮮安全。<br>
+                &ensp;•&ensp;不使用化學添加物，減少身體負擔。<br>
+                &ensp;•&ensp;用料實在，美味吃得到！<br>
+              </p>
+              
+              <p>經過家人親友長時間的摸索與試吃，研發出合宜的做法，吃起來鬆鬆軟軟，有帶有些微餅乾酥酥脆脆的口感，無法言語形容，只能親口體驗！</p>
+  
+        </div>
+            
+    </div>
+
+    <hr class="mx-4 mx-lg-5 mt-sm-2 mt-md-4 mt-lg-8">
+
+    <!-- prodict features -->
+    <div class="mt-4 mx-4 mt-lg-6 mx-lg-5">
+            <div class="">
+                <img src="{% static 'web/assets/img/1.png' %}" alt="" class="img-fluid mx-auto d-block my-2">
+                <img src="{% static 'web/assets/img/1.png' %}" alt="" class="img-fluid mx-auto d-block my-2">
+                <img src="{% static 'web/assets/img/1.png' %}" alt="" class="img-fluid mx-auto d-block my-2">
+
+            </div>
+    </div>
+
+    <hr class="mx-4 mx-lg-5  mt-sm-5 mt-md-4 mt-lg-6">
+  
+  </div>
+ 
+  <!-- shopping info -->
+  
+  <div class=" text-secondary" style="background-color: white;">
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-sm-12 col-md-4 text-center">
+                <p class="h5 mt-3">
+                    <span class="fas fa-rocket"></span>
+                    五天內出貨
+                </p>
+                <div class="mx-3 mt-3">
+                    <p class="text-secondary">今天下單，五天出貨<br>不含下單當天、<br>例假日超商取貨及離島、特殊活動</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 text-center">
+                <p class="h5 mt-3">
+                    <span class="fas fa-store"></span>
+                    超商$790免運
+                </p>
+                <div class="mx-3 mt-3">
+                    <p class="text-secondary">全館滿 $790 超商免運費<br>
+                        滿 $1500 宅配免運費<br>
+                        限台灣地區</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 text-center">
+                <p class="h5 mt-3">
+                    <span class="fas fa-shopping-bag"></span>
+                    多種購買方式
+                </p>
+                <div class="mx-3 mt-3">
+                    <p class="text-secondary">超商取貨付款、轉帳付款、<br>信用卡付款</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+{% endblock %}
+  

@@ -1,0 +1,68 @@
+{% extends 'web/base.html' %} {% block content %}
+{% load static %}
+<!-- content -->
+<main class="main" id="top">
+    <div class="container" data-layout="container">
+
+    <!-- order detail-->
+    <div class="mt-5 mb-8 mx-auto" style="max-width: 1000px;">
+        <!-- table -->
+        <div class="table-responsive scrollbar">
+            <div class="green-title text-center mb-5">歷史訂單</div> 
+            <table class="table table-striped overflow-hidden">
+              <thead class="text-white" style="background-color: #124935;">
+                <tr>
+                  <th scope="col">訂單編號</th>
+                  <th scope="col">訂單日期</th>
+                  <th scope="col">合計</th>
+                  <th scope="col" colspan="2">狀態</th>
+                  <!-- <th scope="col"></th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>000000001</td>
+                  <td>2022/09/26</td>
+                  <td>$1500</td>
+                  <td>已完成</td>
+                  <td class="text-end">
+                    <a class="green-button" href="{% url 'member_order_detail' %}">查看</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>000000001</td>
+                  <td>2022/09/26</td>
+                  <td>$1500</td>
+                  <td>已完成</td>
+                  <td class="text-end">
+                    <a class="green-button">查看</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>000000001</td>
+                  <td>2022/09/26</td>
+                  <td>$1500</td>
+                  <td>已完成</td>
+                  <td class="text-end">
+                    <a class="green-button">查看</a>
+                  </td>
+                </tr>
+               
+              </tbody>
+            </table>
+        </div>
+
+        
+        
+       
+    </div>
+
+
+    
+          
+
+
+      
+    </div>
+</main>
+{% endblock %}

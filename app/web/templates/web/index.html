@@ -1,0 +1,139 @@
+{% extends 'web/base.html' %} {% block content %}
+{% load static %}
+  <!-- content -->
+  <div class="parentClass" style="background-image: url('{% static 'web/assets/img/1.png' %}');">
+    <div class="childClassLeft">
+        <h2 class="text-white">二小姐雪Q餅</h2>
+        <p>外表如白雪覆蓋<br>內裡又酥又鬆又軟</p>
+        <div class="right">
+            <a class="green-button">前往選購</a>
+        </div>
+    </div>
+  </div>
+
+  <div class="parentClass" style="background-image: url('{% static 'web/assets/img/2.png' %}');">
+    <div class="childClassLeft">
+        <h2 class="text-white">二小姐玫瑰曲奇</h2>
+        <p>手工製作 口感鬆脆<br>
+           香氣濃郁 不可思議的好味道！</p>
+        <div class="right">
+            <a class="green-button">前往選購</a>
+        </div>
+        
+    </div>
+  </div>
+
+  <div class="container my-5 text-secondary">
+    <div class="row">
+        <div class="col text-center">
+            <span class="fas fa-shopping-basket"></span>
+            團購美食
+        </div>
+        <div class="col text-center">
+            <span class="fas fa-gift"></span>
+            送禮小物
+        </div>
+        <div class="col text-center">
+            <span class="fas fa-heart"></span>
+            口碑推薦
+        </div>
+    </div>
+
+  </div>
+
+  <div class="parentClass" style="background-image: url('{% static 'web/assets/img/3.jpg' %}');">
+    <div class="childClassRight">
+        <h2 class="text-white">包裝精美 送禮大方</h2>
+        <p>精美紙盒設計<br>
+            附有提袋，送禮方便。</p>
+        <div class="right">
+            <a class="green-button">暸解更多</a>
+        </div>  
+    </div>
+  </div>
+
+  <div class="container my-5 text-secondary">
+    <div class="row">
+        <div class="col text-center">
+            <img src="{% static 'web/assets/img/6.png' %}" alt="" class="img-fluid">
+            <p class="h4 mt-3">純手工製作</p>
+        </div>
+        <div class="col text-center">
+            <img src="{% static 'web/assets/img/7.png' %}" alt="" class="img-fluid">
+            <p class="h4 mt-3">嚴選食材</p> 
+        </div>
+        <div class="col text-center">
+            <img src="{% static 'web/assets/img/8.png' %}" alt="" class="img-fluid">
+            <p class="h4 mt-3">不添加防腐</p>
+        </div>
+    </div>
+
+  </div>
+  
+
+  <section class="text-center" style="background-color: #E5E5E5;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 col-xl-8">
+              <div class="swiper-container theme-slider" data-swiper='{"autoplay":true,"spaceBetween":5,"loop":true,"loopedSlides":5,"slideToClickedSlide":true}'>
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide">
+                    <div class="px-5 px-sm-6">
+                      <p class="fs-sm-1 fs-md-2 fst-italic text-dark">二小姐雪Q餅絕對是吃過最好吃的餅乾之一，口感綿密且不膩，吃著吃著一包很快就吃完了！</p>
+                      <p class="fs-0 text-600">- Q媽 Jamie QQ廚房 -</p>
+                      <img class="w-auto mx-auto" src="{% static 'web/assets/img/QQ_kitchen.png' %}" alt="" height="45" />
+                    </div>
+                  </div>
+
+                  
+                 
+                </div>
+                <div class="swiper-nav">
+                  <div class="swiper-button-next swiper-button-white"></div>
+                  <div class="swiper-button-prev swiper-button-white"> </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- shopping info -->
+  <div class=" text-secondary" style="background-color: white;">
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-sm-12 col-md-4 text-center">
+                <p class="h5 mt-3">
+                    <span class="fas fa-rocket"></span>
+                    五天內出貨
+                </p>
+                <div class="mx-3 mt-3">
+                    <p class="text-secondary">今天下單，五天出貨<br>不含下單當天及離島、特殊活動</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 text-center">
+                <p class="h5 mt-3">
+                    <span class="fas fa-store"></span>
+                    消費滿$1500免運
+                </p>
+                <div class="mx-3 mt-3">
+                    <p class="text-secondary">
+                        滿 $1500 宅配免運費<br>
+                        限台灣地區</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 text-center">
+                <p class="h5 mt-3">
+                    <span class="fas fa-shopping-bag"></span>
+                    線上付款最方便
+                </p>
+                <div class="mx-3 mt-3">
+                    <p class="text-secondary">提供ATM轉帳、<br>信用卡付款兩種方式</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+{% endblock %}

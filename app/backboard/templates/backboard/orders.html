@@ -1,0 +1,55 @@
+{% extends 'backboard/base.html' %} {% block content %}
+{% load static %}
+<!-- 內容 -->
+<div class="g-3 mb-3">
+  <div class="col-lg-12 ps-lg-2 mb-3">
+    <div class="card h-lg-100">
+      <div class="card-header">
+        <div class="mb-3">
+          <a href="{% url 'order_detail' %}" class="brown-btn" role="button">所有訂單</a>
+          <a href="{% url 'order_detail' %}" class="brown-border-btn" role="button">未處理</a>
+          <a href="{% url 'order_detail' %}" class="brown-border-btn" role="button">已完成</a>
+          <a href="{% url 'order_detail' %}" class="brown-border-btn" role="button">已取消</a>
+        </div>
+        <div id="tableExample2" data-list='{"valueNames":["name","email","age"],"page":10,"pagination":true}'>
+          <div class="table-responsive scrollbar">
+            <table class="table  table-striped fs--1 mb-0">
+              <thead class="green-thead">
+                <tr>
+                  <th>訂單狀態</th>
+                  <th>訂單號碼</th>
+                  <th>訂單日期</th>
+                  <th>付款狀態</th>
+                  <th>訂購人</th>
+                  <th>合計</th>
+                  <th colspan="2"></th>
+                </tr>
+              </thead>
+              <tbody class="list">
+                <tr>
+                  <td >
+                    <button type="button" class="brown-border-btn">未處理</button>
+                  </td>
+                  <td>0000000000</td>
+                  <td>2022-04-28</td>
+                  <td>未付款</td>
+                  <td>王小明</td>
+                  <td>$1320</td>
+                  <td class="text-end">                    
+                    <a class="green-btn" href="{% url 'order_detail' %}">查看</a>
+                  </td>
+                </tr>         
+              </tbody>
+            </table>
+          </div>
+          <div class="d-flex justify-content-center mt-3">
+                      <button class="btn btn-sm btn-chijia-default me-1" type="button" title="Previous" data-list-pagination="prev"><span class="fas fa-chevron-left"></span></button>
+                      <ul class="pagination mb-0"></ul>
+                      <button class="btn btn-sm btn-chijia-default ms-1" type="button" title="Next" data-list-pagination="next"><span class="fas fa-chevron-right"> </span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

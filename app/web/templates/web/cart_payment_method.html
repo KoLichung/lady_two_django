@@ -1,0 +1,94 @@
+{% extends 'web/base.html' %} {% block content %}
+{% load static %}
+<!-- content -->
+<main class="main" id="top">
+    <div class="container" data-layout="container">
+      
+    <!-- stepper    -->
+    <div class="row">
+      <div class="col-xs-12 col-md-8 offset-md-2 block">
+        <div class="stepper-wrapper">
+            <div class="stepper-item completed">
+              <div class="step-counter">1</div>
+              <div class="step-name">購物車</div>
+            </div>
+            <div class="stepper-item completed">
+              <div class="step-counter">2</div>
+              <div class="step-name">付款方式</div>
+            </div>
+            <div class="stepper-item">
+              <div class="step-counter">3</div>
+              <div class="step-name">填寫資料</div>
+            </div>
+            <div class="stepper-item">
+              <div class="step-counter">4</div>
+              <div class="step-name">訂單確認</div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- order detail-->
+    <div class="mt-5 mb-8 mx-auto" style="max-width: 1000px;">
+        <!-- table -->
+        <div class="table-responsive scrollbar">
+            <div class="green-title text-center mb-5">選擇付款方式</div> 
+            <table class="table overflow-hidden table-borderless">
+              <thead class="text-white" style="background-color: #124935;">
+                <tr>
+                  <th colspan="3">付款方式</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="form-check">
+                        <input class="form-check-input" id="flexRadioDefault1" type="radio" name="flexRadioDefault" />
+                        <label class="form-check-label" for="flexRadioDefault1">ATM代碼繳費</label>
+                    </div>
+                  </td>
+                  <td class="text-end text-secondary">宅配運費 $80，滿 $1500 免運費</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" id="flexRadioDefault1" type="radio" name="flexRadioDefault" />
+                      <label class="form-check-label" for="flexRadioDefault1">信用卡付款</label>
+                    </div>
+                  </td>
+                  <td class="text-end text-secondary">宅配運費 $80，滿 $1500 免運費</td>  
+                </tr>
+              </tbody>
+            </table>
+        </div>
+
+        <!-- price  -->
+        <div class="grey-price-box">
+            <div class="d-flex justify-content-end">
+                <div class="text-end">商品金額&emsp;</div>
+                <div class="text-end">$660</div>
+            </div>
+            <div class="d-flex justify-content-end">
+                <div class="text-end">運費&emsp;&emsp;&emsp;&ensp;</div>
+                <div class="text-end">$80</div>
+            </div>
+            <div style=" width: 200px; margin-left: auto;">
+                <hr style="color: grey;"  >
+            </div>
+            <div class="d-flex justify-content-end align-items-center">
+                <div class="text-end">總計&emsp;</div>
+                <div class="text-end cart-price">$740</div>
+            </div>
+        </div>
+        
+        <!-- buttons -->
+        <div class="mt-5 d-flex justify-content-between">
+            <a href="{% url 'cart_order_list' %}"><div class="green-button">回購物車</div></a>
+            <a href="{% url 'cart_order_detail' %}"><div class="green-button">填寫資料</div></a>
+        </div>
+    </div>
+
+    </div>
+</main>
+{% endblock %}
+  
